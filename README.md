@@ -1,7 +1,7 @@
 # Gradient Descent
 
-**Nombre:** Omar Alejandro Guzmán Munguía <br>
-**Correo:** omar.guzman5063@alumnos.udg.mx
+**Name:** Omar Alejandro Guzmán Munguía <br>
+**Email:** omar.guzman5063@alumnos.udg.mx
 
 The objective of this activity is to apply the Gradient Descent optimization algorithm to find a local minimum of a two-dimensional function, specifically the `Matyas Function`.
 
@@ -10,6 +10,20 @@ The `Matyas Function`is defined as:
 $$ f(x, y) = 0.26(x^2 + y^2) - 0.48xy $$
 
 This function is a convex surface with a single global minimum at the point  (0,0).
+
+Matyas Function
+```python
+def f_matyas(x, y):
+    return 0.26 * (x**2 + y**2) - 0.48 * x * y
+```
+
+Gradient of the Matyas function
+```python
+def grad_f_matyas(x, y):
+    grad_x = 0.52 * x - 0.48 * y
+    grad_y = 0.52 * y - 0.48 * x
+    return np.array([grad_x, grad_y])
+```
 
 ### Steps Performed
 
